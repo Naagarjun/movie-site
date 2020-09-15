@@ -1,0 +1,21 @@
+{% extends "home1.html" %} {% block content %}
+{% if results %}
+<div class="container" style="margin-top: 10px; border: 1px #393d41">
+    <div class="row">
+        <div class="col-12 nav justify-content-center rounded-pill bg-movie-list">
+            <h4>Latest movies</h4>
+        </div>
+        {% for search in results %}
+        <div class="movie-box col-sm-2">
+            <img src="{{search.image.url}}" alt="" class="img-fluid rounded" id="movie-img" />
+            <a href="{% url 'movie-detail' search.slug %}" id="movie-title">{{search.name}}</a>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% else %}
+<h5 style="color: rgb(255, 136, 0); text-align: center; margin:175px 75px 175px 75px">No match found. Try another
+    search.
+    <br />request a movie</h5>
+{% endif %}
+{% endblock %}

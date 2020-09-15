@@ -1,0 +1,36 @@
+{% extends "home1.html" %} {% block content %}
+<div class="container" style="margin-top: 10px; border: 1px #393d41">
+    <div class="row">
+        <div class="col-md-8">
+            <div class="detail-box rounded-top">
+                <div class="entry-title">
+                    <h4 style="padding-top: 10px;">{{movie.name}}</h4>
+                </div>
+                <img src="{{movie.image.url}}" alt="" class="rounded mx-auto d-block" style="margin-top: 10px; width: 180px;
+  height: 210px;" />
+                <div style="color: blanchedalmond; text-align: center; margin:15px;">
+                    <p class="movie-details"> size: {{movie.size}}</p>
+                    <p class="movie-details"> resolution: {{movie.resolution}}</p>
+                    <p class="movie-details"> director: {{movie.director}}</p>
+                    <p class="movie-details"> cast: {{movie.cast}}</p>
+                    <p class="movie-details"> genre: {{movie.genres}}</p>
+                    <p> story description: {{movie.movie_story}}</p>
+                    <p><a href="https://{{movie.download_link}}"> download</a></p>
+                </div>
+            </div>
+        </div>
+        <!-- <div class="col-md-4">
+            <div class="content-section"
+                style="background-color: rgb(40, 42, 43); color: rgb(211, 211, 218); margin: 1.5em 0;">
+                <h3 style="text-align: center;">Our Sidebar</h3>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item" style="background-color: rgb(40, 42, 43); color: rgb(211, 211, 218);">
+                        <p>>> <a href="#">Chuck Norris Jokes </a></p>
+                    </li>
+                </ul>
+                </p>
+            </div>
+        </div> -->
+    </div>
+</div>
+{% endblock %}

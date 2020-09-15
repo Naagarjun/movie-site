@@ -1,0 +1,47 @@
+{% extends "base.html" %} {% block content %} {% for movie in movies %}
+<article
+  class="media content-section"
+  style="background-color: rgb(40, 42, 43); color: rgb(211, 211, 218)"
+>
+  <img
+    class="rounded img-fluid"
+    style="height: 150px; width: 100px; padding-right: 5px"
+    src="{{ movie.image.url }}"
+  />
+  <div class="media-body">
+    <div class="article-metadata">
+      <p class="mr-2">{{ movie.category }}</p>
+      <!-- <small class="text-muted">{{ movie.date_movieed | date:"F d, Y"}}</small> -->
+    </div>
+    <h5><a class="article-title" href="#">{{ movie.name }}</a></h5>
+    <p
+      class="article-content"
+      style="font-size: 12px; color: rgb(211, 211, 218)"
+    >
+      {{ movie.cast }}
+    </p>
+  </div>
+</article>
+{% endfor %}
+
+<!-- {% if is_paginated %}
+{% if page_obj.has_previous %}
+<a href="?page=1" class="btn btn-outline-info mb-4 btn-sm">first</a>
+<a href="?page={{page_obj.previous_page_number}}" class="btn btn-outline-info mb-4 btn-sm">previous</a>
+{% endif%}
+
+{% for page in page_obj.paginator.page_range %}
+{% if page_obj.number == page %}
+<a href="?page={{page}}" class="btn btn-info mb-4 btn-sm">{{page}}</a>
+{% elif page > page_obj.number|add:'-3' and page < page_obj.number|add:'3' %}
+<a class="btn btn-outline-info mb-4 btn-sm" href="?page={{ page }}">{{ page }}</a>
+{% endif %}
+{% endfor %}
+
+{% if page_obj.has_next %}
+<a href="?page={{page_obj.next_page_number}}" class="btn btn-outline-info mb-4 btn-sm">next</a>
+<a href="?page={{page_obj.paginator.num_pages}}" class="btn btn-outline-info mb-4 btn-sm">last</a>
+{% endif%}
+
+{% endif%} -->
+{% endblock content %}

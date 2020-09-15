@@ -1,0 +1,76 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+  <link rel="stylesheet" href="{% static 'css/main.css' %}">
+  <!-- <link rel="stylesheet" href="{% static 'css/styles.css' %}"> -->
+
+  <!-- <style>
+      .my-container{
+        border: 2px solid lawngreen;
+      }
+      .my-row{
+        border: 2px dotted gold;
+      }
+      .my-col{
+        color:aliceblue;
+        border:3px solid hotpink;
+      }
+    </style> -->
+  <title>Film4u</title>
+</head>
+
+<body>
+  <nav class="navbar navbar-dark bg-dark ">
+    <a class="navbar-brand" style="font-size:38px; font:sans-serif;">Film4u.in</a>
+    <form class="form-inline">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-secondary my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </nav>
+  <!-- <nav class="navbar navbar-dark bg-grey"> -->
+  <div class="nav justify-content-center navbar-dark bg-grey">
+    <a class="nav-link link-color" href="#">Telugu</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link link-color" href="#">Hollywood</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link link-color" href="#">Bollywood</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link link-color" href="#">Tamil</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link link-color" href="#">Kannada</a>
+    </li>
+    </ul>
+  </div>
+  <!-- <div class="container my-container">
+  <div class="row">
+    <div class="col-12 nav justify-content-center bg-movie-list" style="color: azure;">
+      Row-1 col-1
+    </div>
+  </div>
+<div class="container">
+  <div class="row my-row" style="padding-top: 5px;">
+      {% for movie in movies %}
+      <div class="col-lg-2 col-md-4 my-col">
+        <div class="movie-container">
+          <img src="{{movie.image.url}}" class="img-fluid" id="movie-img">
+          <h6 id="movie-title">{{movie.name}}</h6>
+        </div>
+      </div>
+      {% endfor %}
+  </div>
+
+</div>
+</div> -->
+  <div class="jumbotron" style="border: 2px solid bisque;"></div>
+</body>
+
+</html>

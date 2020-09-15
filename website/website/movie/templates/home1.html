@@ -1,0 +1,44 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" />
+  <link rel="stylesheet" href="{% static 'css/custom.css' %}" />
+  <!-- <link rel="stylesheet" href="{% static 'css/styles.css' %}"> -->
+  <title>Film4u</title>
+</head>
+
+<body>
+  <nav class="navbar navbar-dark bg-dark">
+    <a class="navbar-brand" style="font-size: 38px; font: sans-serif" href="{% url 'home' %}">Film4u.in</a>
+    <form action="{% url 'search' %}" class="form-inline" method="GET">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="q" />
+      <button class="btn btn-outline-secondary my-2 my-sm-0" type="submit">
+        Search
+      </button>
+    </form>
+  </nav>
+  <div class="nav justify-content-center navbar-dark bg-grey">
+    <a class="nav-item nav-link link-color" href="/movie-category/Telugu">Telugu</a>
+    <a class="nav-item nav-link link-color" href="/movie-category/Kannada">Kannada</a>
+    <a class="nav-item nav-link link-color" href="/movie-category/Tamil">Tamil</a>
+    <a class="nav-item nav-link link-color" href="/movie-category/Bollywood">Bollywood</a>
+    <a class="nav-item nav-link link-color" href="/movie-category/Hollywood">Hollywood</a>
+  </div>
+
+  <!-- <nav class="navbar navbar-dark bg-grey"> -->
+  {% block content %}{% endblock %}
+
+  <!-- <div class="container">
+    <div class="row">
+        <h6 class="col-lg-9 rounded-pill bg-movie-list" style="padding-left: 350px;">Latest movies</h6>
+        <h5 class="col-lg-3 rounded-pill bg-movie-list" style="padding-left: 100px;">Sidebar</h5>
+        
+    </div>
+</div> -->
+</body>
+
+</html>

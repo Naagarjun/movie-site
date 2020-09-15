@@ -1,0 +1,15 @@
+{% extends "home1.html" %} {% block content %}
+<div class="container" style="margin-top: 10px; border: 1px #393d41">
+  <div class="row">
+    <div class="col-12 nav justify-content-center rounded-pill bg-movie-list">
+      <h4>Latest movies</h4>
+    </div>
+    {% for movie in movies%}
+    <div class="movie-box col-sm-2">
+      <img src="{{movie.image.url}}" alt="" class="img-fluid rounded" id="movie-img" />
+      <a href="{% url 'movie-detail' movie.slug %}" id="movie-title">{{movie.name}}</a>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+{% endblock %}
